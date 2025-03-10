@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class SelectYourWebsite {
 
-	@Test
+	//@Test
 	
 	
 }
