@@ -9,4 +9,9 @@ public class SelectYourWebsite {
 	private void syso() {
     System.out.println("Sidd");
 	}
+
+public static void main() {
+    System.out.println("Sidd");
+
+}
 }
