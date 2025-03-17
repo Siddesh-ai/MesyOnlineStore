@@ -120,7 +120,7 @@ public class WebDriverUtility {
 
 	public void scrollByAmt(WebDriver driver) {
 		Actions a = new Actions(driver);
-		a.scrollByAmount(0, 0).perform();
+		a.scrollByAmount(500, 300).perform();
 	}
 
 	public void clickAndHold(WebDriver driver, WebElement ele) {
