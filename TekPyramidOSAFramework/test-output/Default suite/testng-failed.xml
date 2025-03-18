@@ -7,6 +7,7 @@
         <methods>
           <include name="configBC"/>
           <include name="configBS"/>
+          <include name="booksTestWithAssertVerif"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBM"/>

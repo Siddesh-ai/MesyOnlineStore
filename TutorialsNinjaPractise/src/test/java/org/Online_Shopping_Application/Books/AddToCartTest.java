@@ -39,13 +39,7 @@ public class AddToCartTest extends BaseClass {
 		map.enterSearchFieldForProductCompare(productName);
 		
 		SearchResultsPage srp = new SearchResultsPage(driver);
-		//wLib.scrollByAmt(driver);
 		
-		/* To add to cart use this dynamic xpath
-		driver.findElement(By.xpath("//div[contains(@class, 'product-layout')]//a[contains(text(),'" + productName
-				+ "')]/ancestor::div[contains(@class,'product-thumb')]//button[contains(@onclick, 'cart.add')]"))
-				.click();    
-				*/
 		srp.getSelectProductOnSearchresultPage().click();
 		
 		ProductComparePage pcp = new ProductComparePage(driver);

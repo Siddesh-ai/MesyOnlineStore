@@ -11,8 +11,8 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>loginUsingInvalidCred</td>
-<td>smokeTest </td>
+<td>prodCompareFromProdDisplayPageTest</td>
+<td>ST </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
@@ -20,17 +20,12 @@
 <td>smokeTest </td>
 </tr>
 <tr>
-<td>&nbsp;</td>
-<td>prodCompareFromProdDisplayPage</td>
-<td>ST </td>
-</tr>
-<tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td>configBC</td>
-<td>regressionTest smokeTest </td>
+<td>regressionTest ST smokeTest </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeMethod</td>
@@ -38,10 +33,15 @@
 <tr>
 <td>&nbsp;</td>
 <td>configBM</td>
-<td>regressionTest smokeTest </td>
+<td>regressionTest ST smokeTest </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>configAM</td>
+<td>regressionTest ST smokeTest </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@AfterClass</td>
@@ -49,6 +49,6 @@
 <tr>
 <td>&nbsp;</td>
 <td>configAC</td>
-<td>regressionTest smokeTest </td>
+<td>regressionTest ST smokeTest </td>
 </tr>
 </table>

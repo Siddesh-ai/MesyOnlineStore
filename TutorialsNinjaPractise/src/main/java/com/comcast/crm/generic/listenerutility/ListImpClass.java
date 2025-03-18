@@ -30,7 +30,7 @@ public class ListImpClass implements ITestListener, ISuiteListener {
 		ExtentSparkReporter spark = new ExtentSparkReporter("./AdvanceReport/report" + time + ".html");
 		spark.config().setDocumentTitle("CRM Test Suite results");  //title 
 		spark.config().setReportName("CRM Report");
-		spark.config().setTheme(Theme.valueOf(time));
+		spark.config().setTheme(Theme.DARK);
 		// add Env information & create test
 		report = new ExtentReports();
 		report.attachReporter(spark);

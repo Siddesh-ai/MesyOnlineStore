@@ -17,6 +17,7 @@ import com.comcast.crm.generic.databaseutility.DataBaseUtility;
 import com.comcast.crm.generic.fileutility.ExcelUtility;
 import com.comcast.crm.generic.fileutility.FileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
+import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositaryutility.HomePage;
 import com.comcast.crm.objectrepositaryutility.LoginPage;
@@ -54,6 +55,8 @@ public class BaseClass {
 		} else {
 			driver = new ChromeDriver();
 		}
+		UtilityClassObject.setDriver(driver);                      //screenshot driver
+		
 		wLib.waitForPageToLoad(driver); // implicit wait
 		String URL = fLib.getDataFromPropertiesFile("url");
 		driver.get(URL);
