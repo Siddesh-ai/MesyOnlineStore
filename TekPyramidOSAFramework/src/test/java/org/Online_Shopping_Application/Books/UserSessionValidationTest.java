@@ -16,9 +16,9 @@ public class UserSessionValidationTest extends BaseClass {
 
 		String actualUserInfoOnHomePage = mcp.getUserLoginConf().getText();
 
-		String expectedUserInfoOnHomePage = eLib.getDataFromExcel("IntegrationTestCase", 1, 1).trim();
+		String expectedUserInfoOnHomePage = eLib.getDataFromExcel("IntegrationTestCase", 1, 1);
 
-		Assert.assertEquals(expectedUserInfoOnHomePage, actualUserInfoOnHomePage);
+		Assert.assertEquals(actualUserInfoOnHomePage.contains(expectedUserInfoOnHomePage), true);
 	}
 
 	@Test

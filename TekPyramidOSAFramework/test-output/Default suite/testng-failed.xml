@@ -3,17 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.Online_Shopping_Application.Books.BooksTest">
+      <class name="org.Online_Shopping_Application.Books.UserSessionValidationTest">
         <methods>
           <include name="configBC"/>
           <include name="configBS"/>
-          <include name="booksTestWithAssertVerif"/>
           <include name="configAC"/>
           <include name="configAS"/>
           <include name="configBM"/>
-          <include name="booksTest"/>
+          <include name="UserProfileUpdateTest"/>
         </methods>
-      </class> <!-- org.Online_Shopping_Application.Books.BooksTest -->
+      </class> <!-- org.Online_Shopping_Application.Books.UserSessionValidationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

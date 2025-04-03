@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.comcast.crm.generic.listenerutility.ListImpClass"/>
-  </listeners>
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Test-Runner1(failed)">
+    <parameter name="browserName" value="Edge"/>
     <classes>
-      <class name="org.Online_Shopping_Application.Books.AddToCartTest">
+      <class name="docker.SampleTest">
         <methods>
-          <include name="configBC"/>
-          <include name="configBS"/>
-          <include name="configAC"/>
-          <include name="configAS"/>
-          <include name="prodCompareFromProdDisplayPageTest"/>
-          <include name="configBM"/>
-          <include name="configAM"/>
+          <include name="sampleTest"/>
         </methods>
-      </class> <!-- org.Online_Shopping_Application.Books.AddToCartTest -->
+      </class> <!-- docker.SampleTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test-Runner1(failed) -->
+  <test thread-count="3" parallel="tests" name="Test-Runner2(failed)">
+    <parameter name="browserName" value="Chrome"/>
+    <classes>
+      <class name="docker.SampleTest">
+        <methods>
+          <include name="sampleTest"/>
+        </methods>
+      </class> <!-- docker.SampleTest -->
+    </classes>
+  </test> <!-- Test-Runner2(failed) -->
+  <test thread-count="3" parallel="tests" name="Test-Runner3(failed)">
+    <parameter name="browserName" value="Firefox"/>
+    <classes>
+      <class name="docker.SampleTest">
+        <methods>
+          <include name="sampleTest"/>
+        </methods>
+      </class> <!-- docker.SampleTest -->
+    </classes>
+  </test> <!-- Test-Runner3(failed) -->
 </suite> <!-- Failed suite [Suite] -->
