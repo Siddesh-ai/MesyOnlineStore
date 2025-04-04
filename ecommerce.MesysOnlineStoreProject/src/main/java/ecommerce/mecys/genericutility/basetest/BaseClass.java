@@ -12,6 +12,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
+import com.beust.jcommander.Parameter;
 
 import ecommerce.mecys.genericutility.databaseutility.DataBaseUtility;
 import ecommerce.mecys.genericutility.fileutility.ExcelUtility;
@@ -38,12 +41,14 @@ public class BaseClass {
 		dbLib.getDbconnection();
 	}
 
+	@Parameters("browser")
 	@BeforeClass(groups = { "smokeTest", "IntegrationTest", "SystemTest" })
 
-	public void configBC() throws Throwable {
+	public void configBC(String browser) throws Throwable {
 		System.out.println("===Launch the BROWSER===");
-
-		String BROWSER = System.getProperty("browser", fLib.getDataFromPropertiesFile("browser"));
+          
+		String BROWSER = browser;
+		//String BROWSER = System.getProperty("browser", fLib.getDataFromPropertiesFile("browser"));
 
 		if (BROWSER.equals("Chrome")) {
 			driver = new ChromeDriver();
