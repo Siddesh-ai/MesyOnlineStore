@@ -41,14 +41,14 @@ public class BaseClass {
 		dbLib.getDbconnection();
 	}
 
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeClass(groups = { "smokeTest", "IntegrationTest", "SystemTest" })
 
-	public void configBC(String browser) throws Throwable {
+	public void configBC() throws Throwable {
 		System.out.println("===Launch the BROWSER===");
           
-		String BROWSER = browser;
-		//String BROWSER = System.getProperty("browser", fLib.getDataFromPropertiesFile("browser"));
+		//String BROWSER = browser;
+		String BROWSER = System.getProperty("browser", fLib.getDataFromPropertiesFile("browser"));
 
 		if (BROWSER.equals("Chrome")) {
 			driver = new ChromeDriver();
